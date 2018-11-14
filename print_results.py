@@ -83,12 +83,12 @@ def print_results(results_dic, results_stats_dic, model,
     
     if print_incorrect_breed:
         if results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed'] :
-            print('*******Misclassified Breed\'s of Dog*********')
+            print('*******Misclassified Breeds of Dog*********')
             for key, value in results_dic.items():
                 if sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0:
                     print('{}: {}'.format(key, value[1]))
         else:
             print('No Misclassified Breed\'s of Dog')
     
-    None
+    return None
                 
